@@ -1,4 +1,4 @@
 
-public class Predator {
+public class Predator extends Moveable{
 
 }

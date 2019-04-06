@@ -35,6 +35,14 @@ class View extends JPanel{
 		// TODO Auto-generated method stub
 		
 	}
+	public int getImageWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public int getImageHeight() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 }

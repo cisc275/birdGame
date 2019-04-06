@@ -1,4 +1,4 @@
 
-public class Nest {
+public class Nest extends Moveable{
 
 }

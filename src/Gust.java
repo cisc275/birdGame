@@ -1,4 +1,4 @@
 
-public class Gust {
+public class Gust extends Moveable{
 
 }
