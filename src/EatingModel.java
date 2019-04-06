@@ -1,4 +1,4 @@
-
+import java.util.List;
 
 class EatingModel extends Model{
 	
@@ -10,7 +10,8 @@ class EatingModel extends Model{
 	void updateCollision() {}
 	boolean endGame() {return false;}
 	
-	boolean foodEaten() {}
+	boolean foodEaten() {
+		return false;}
 	void generateFood() {}
 	
 	

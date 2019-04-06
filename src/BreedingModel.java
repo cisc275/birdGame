@@ -1,7 +1,8 @@
+import java.util.List;
 
 class BreedingModel extends Model{
 	
-	Breedingbird bird;
+	BreedingBird bird;
 	List<Predator> predators;
 	Nest nest;
 	
