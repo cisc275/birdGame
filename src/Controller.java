@@ -20,10 +20,21 @@ public class Controller implements MouseMotionListener,MouseListener{
 		bModel = new BreedingModel(frameWidth, frameHeight);
 		
 		//can switch models later
-		model = eModel;
-		
-
-		
+		model = eModel;		
+	}
+	
+	//for testing
+	public String checkModel() {
+		String string = "? not e, b, or m model ?";
+		if(model.equals(eModel)) {
+			string = "currently eModel";
+		}else if(model.equals(bModel)) {
+			string = "currently bModel";
+		}else if(model.equals(mModel)) {
+			string = "currently mModel";
+		}
+		System.out.println(string);
+		return string;
 	}
 
 	//handles ticking: update model, update view 

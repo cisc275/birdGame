@@ -11,6 +11,10 @@ public class Food extends Moveable{
 		xVelocity = xV;
 		yVelocity = yV;
 	}
+	
+	int getScoreValue() {
+		return scoreValue;
+	}
 
 	@Override
 	void update() {
