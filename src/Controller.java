@@ -36,3 +36,6 @@ public class Controller implements ActionListener,KeyListener{
 		// TODO Auto-generated method stub
 		
 	}  
+	
+	public void start() {}
+}
