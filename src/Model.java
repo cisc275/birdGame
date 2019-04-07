@@ -1,6 +1,4 @@
 
-
-
 abstract class Model{
 	int score;
 	int frameHeight;
@@ -8,13 +6,7 @@ abstract class Model{
 	//may need timer/countdown for models
 	
 	int getScore() {return score;}
-	void setScore(int s) {score = s;}
-	
-	//pass frame height/width from view to create models
-	Model(int w, int h){
-		frameHeight = w;
-		frameWidth = h;
-	}
+	void setScore(int s) {score = s;}	
 
 	//contains logic of what to do each tick, call smaller updates within
 	abstract void update();
