@@ -46,13 +46,12 @@ class View extends JPanel{
 	void displayScore(int eScore, int mScore, int bScore) {}
 	
 	
-	public void addControllerToKeyboard(Controller controller) {
+	public void addControllerToMouse(Controller controller) {
 		// TODO Auto-generated method stub
+		this.addMouseListener(controller);
+		this.addMouseMotionListener(controller);
 	}
-	public void addControllerToButton(Controller controller) {
-		// TODO Auto-generated method stub
-		
-	}
+
 	public int getImageWidth() {
 		// TODO Auto-generated method stub
 		return 0;
