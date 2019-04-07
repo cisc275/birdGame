@@ -10,12 +10,37 @@ import java.awt.image.*;
 
 class View extends JPanel{
 	JFrame frame;
-	int frameHeight;
-	int frameWidth;
+	static int frameWidth = 300;
+	static int frameHeight = 300;
+	static Dimension windowSize  = new Dimension(frameWidth, frameHeight);  //for setting window
 	BufferedImage bird;
 	
+	View(){
+		this.buildFrame();
+	}
 
-	void buildFrame() {}
+	public int getFrameWidth() {
+		return frameWidth;
+	}
+	public int getFrameHeight() {
+		return frameHeight;
+	}
+	
+	private void buildFrame() {
+		frame = new JFrame();
+		frame.getContentPane().add(this);
+		//frame.setBackground(Color.gray);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(frameWidth, frameHeight);
+		
+		frame.setVisible(true); //NOTE: must put all in frame before setVisible
+			 	
+		frame.setSize(windowSize);
+		frame.setMinimumSize(windowSize);
+		frame.setMaximumSize(windowSize);
+		this.setFocusable(true);
+	}
+	
 	public void paint(Graphics g) {}
 	void addControllerToMouse(MouseMotionListener m) {}
 	void update(EatingBird b, List food) {}
@@ -28,21 +53,12 @@ class View extends JPanel{
 	void displayScore(int eScore, int mScore, int bScore) {}
 	
 	
-	public void addControllerToKeyboard(Controller controller) {
+	public void addControllerToMouse(Controller controller) {
 		// TODO Auto-generated method stub
+		this.addMouseListener(controller);
+		this.addMouseMotionListener(controller);
 	}
-	public void addControllerToButton(Controller controller) {
-		// TODO Auto-generated method stub
-		
-	}
-	public int getImageWidth() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	public int getImageHeight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 	
 	
 }
