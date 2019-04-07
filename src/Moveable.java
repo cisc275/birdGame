@@ -1,20 +1,12 @@
 
 public abstract class Moveable {
 	
-	private int x;
-	private int y;
-	private int radius;
-	private int xVelocity;
-	private int yVelocity;
-	
-	Moveable(int xP, int yP, int r, int xV, int yV){
-		x = xP;
-		y = yP;
-		radius = r;
-		xVelocity = xV;
-		yVelocity = yV;
-	}
-	
+	protected int x;
+	protected int y;
+	protected int radius;
+	protected int xVelocity;
+	protected int yVelocity;
+
 	int getX() {return x;}
 	int getY() {return y;}
 	int getR() {return radius;}

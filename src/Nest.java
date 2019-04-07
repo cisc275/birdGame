@@ -1,9 +1,19 @@
 
 public class Nest extends Moveable{
+	
+	int egg1;
+	int egg2;
+	int egg3;
 
-	Nest(int xP, int yP, int r, int xV, int yV) {
-		super(xP, yP, r, xV, yV);
+	//nest does not move
+	Nest(int xP, int yP, int r){
+		x = xP;
+		y = yP;
+		radius = r;
+		xVelocity = 0;
+		yVelocity = 0;	
 	}
+
 
 	@Override
 	void update() {

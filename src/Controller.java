@@ -10,19 +10,23 @@ public class Controller implements MouseMotionListener,MouseListener{
 	private View view;
 	
 	public Controller(){
-		eModel = new EatingModel();
-		mModel = new MigratingModel();
-		bModel = new BreedingModel();
+		view = new View();
+		view.addControllerToMouse(this);
+		int frameWidth = view.getFrameWidth();
+		int frameHeight = view.getFrameHeight();
+				
+		eModel = new EatingModel(frameWidth, frameHeight);
+		mModel = new MigratingModel(frameWidth, frameHeight);
+		bModel = new BreedingModel(frameWidth, frameHeight);
 		
 		//can switch models later
 		model = eModel;
 		
-		view = new View();
-		view.addControllerToMouse(this);
+
 		
 	}
 
-
+	//handles ticking: update model, update view 
 	public void start() {}
 
 	

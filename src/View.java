@@ -10,13 +10,20 @@ import java.awt.image.*;
 
 class View extends JPanel{
 	JFrame frame;
-	static int frameHeight = 300;
 	static int frameWidth = 300;
-	static Dimension windowSize  = new Dimension(frameWidth, frameHeight);  
+	static int frameHeight = 300;
+	static Dimension windowSize  = new Dimension(frameWidth, frameHeight);  //for setting window
 	BufferedImage bird;
 	
 	View(){
 		this.buildFrame();
+	}
+
+	public int getFrameWidth() {
+		return frameWidth;
+	}
+	public int getFrameHeight() {
+		return frameHeight;
 	}
 	
 	private void buildFrame() {
@@ -52,14 +59,6 @@ class View extends JPanel{
 		this.addMouseMotionListener(controller);
 	}
 
-	public int getImageWidth() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	public int getImageHeight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 	
 }

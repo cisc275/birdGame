@@ -1,8 +1,12 @@
 
 public class Enemy extends Moveable{
 
-	Enemy(int xP, int yP, int r, int xV, int yV) {
-		super(xP, yP, r, xV, yV);
+	Enemy(int xP, int yP, int r, int xV, int yV){
+		x = xP;
+		y = yP;
+		radius = r;
+		xVelocity = xV;
+		yVelocity = yV;
 	}
 
 	@Override
